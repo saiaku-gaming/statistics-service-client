@@ -1,1 +1,1 @@
-# wardrobe-service-client
+# feat-service-client

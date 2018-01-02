@@ -1,4 +1,4 @@
-package com.valhallagame.wardrobeserviceclient.message;
+package com.valhallagame.featserviceclient.message;
 
 import javax.validation.constraints.NotNull;
 
@@ -9,9 +9,9 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class AddWardrobeItemParameter {
+public class DebugAddFeatParameter {
 	@NotNull
-	private String characterName;
+	private String username;
 	
 	@NotNull
 	private String itemName;
