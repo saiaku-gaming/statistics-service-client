@@ -23,12 +23,14 @@
 
 	<distributionManagement>
 		<repository>
-			<id>myMavenRepo</id>
-			<url>${myMavenRepoWriteUrl}</url>
+			<id>central</id>
+			<name>${valhallaCentralName}</name>
+			<url>${valhallaCentralUrl}</url>
 		</repository>
 		<snapshotRepository>
-			<id>myMavenRepo</id>
-			<url>${myMavenRepoWriteUrl}</url>
+			<id>snapshots</id>
+			<name>${valhallaSnapshotsName}</name>
+			<url>${valhallaSnapshotsUrl}</url>
 		</snapshotRepository>
 	</distributionManagement>
 
