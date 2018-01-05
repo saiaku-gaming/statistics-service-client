@@ -14,23 +14,23 @@
 	<groupId>com.valhallagame.valhalla</groupId>
 
 
-	<repositories>
+	<!-- <repositories>
 		<repository>
 			<id>myMavenRepo</id>
 			<url>${myMavenRepoReadUrl}</url>
 		</repository>
-	</repositories>
+	</repositories> -->
 
 	<distributionManagement>
 		<repository>
 			<id>central</id>
-			<name>${valhallaCentralName}</name>
-			<url>${valhallaCentralUrl}</url>
+			<name>615a971e282c-snapshots</name>
+       		<url>https://artifactory-lb.taskify.se:8081/libs-release-local</url>
 		</repository>
 		<snapshotRepository>
 			<id>snapshots</id>
-			<name>${valhallaSnapshotsName}</name>
-			<url>${valhallaSnapshotsUrl}</url>
+			<name>615a971e282c-snapshots</name>
+       		<url>https://artifactory-lb.taskify.se:8081/libs-snapshot-local</url>
 		</snapshotRepository>
 	</distributionManagement>
 
