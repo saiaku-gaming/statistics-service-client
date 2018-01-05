@@ -24,7 +24,7 @@
 	<distributionManagement>
 		<repository>
 			<id>central</id>
-			<name>615a971e282c-snapshots</name>
+			<name>615a971e282c-central</name>
        		<url>https://artifactory-lb.taskify.se:8081/libs-release-local</url>
 		</repository>
 		<snapshotRepository>
