@@ -13,14 +13,6 @@
 	<packaging>jar</packaging>
 	<groupId>com.valhallagame.valhalla</groupId>
 
-
-	<!-- <repositories>
-		<repository>
-			<id>myMavenRepo</id>
-			<url>${myMavenRepoReadUrl}</url>
-		</repository>
-	</repositories> -->
-
 	<distributionManagement>
 		<repository>
 			<id>central</id>
