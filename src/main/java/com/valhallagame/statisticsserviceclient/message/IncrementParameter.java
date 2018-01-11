@@ -9,10 +9,13 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class AddStatisticsParameter {
+public class IncrementParameter {
 	@NotNull
 	private String characterName;
 	
 	@NotNull
-	private String statisticsName;
+	private String key;
+	
+	@NotNull
+	private int value;
 }
