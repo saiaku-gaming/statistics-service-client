@@ -1,1 +1,1 @@
-# feat-service-client
+# statistics-service-client

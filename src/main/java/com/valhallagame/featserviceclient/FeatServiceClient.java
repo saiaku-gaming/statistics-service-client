@@ -1,4 +1,4 @@
-package com.valhallagame.featserviceclient;
+package com.valhallagame.statisticsserviceclient;
 
 import java.io.IOException;
 import java.util.List;
@@ -7,46 +7,46 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.valhallagame.common.DefaultServicePortMappings;
 import com.valhallagame.common.RestCaller;
 import com.valhallagame.common.RestResponse;
-import com.valhallagame.featserviceclient.message.AddFeatParameter;
-import com.valhallagame.featserviceclient.message.DebugAddFeatParameter;
-import com.valhallagame.featserviceclient.message.GetFeatsParameter;
+import com.valhallagame.statisticsserviceclient.message.AddStatisticsParameter;
+import com.valhallagame.statisticsserviceclient.message.DebugAddStatisticsParameter;
+import com.valhallagame.statisticsserviceclient.message.GetStatisticssParameter;
 
 
-public class FeatServiceClient {
-	private static FeatServiceClient featServiceClient;
+public class StatisticsServiceClient {
+	private static StatisticsServiceClient statisticsServiceClient;
 
-	private String featServiceServerUrl = "http://localhost:" + DefaultServicePortMappings.FEAT_SERVICE_PORT;
+	private String statisticsServiceServerUrl = "http://localhost:" + DefaultServicePortMappings.STATISTICS_SERVICE_PORT;
 	private RestCaller restCaller;
 
-	private FeatServiceClient() {
+	private StatisticsServiceClient() {
 		restCaller = new RestCaller();
 	}
 
-	public static void init(String featServiceServerUrl) {
-		FeatServiceClient client = get();
-		client.featServiceServerUrl = featServiceServerUrl;
+	public static void init(String statisticsServiceServerUrl) {
+		StatisticsServiceClient client = get();
+		client.statisticsServiceServerUrl = statisticsServiceServerUrl;
 	}
 
-	public static FeatServiceClient get() {
-		if (featServiceClient == null) {
-			featServiceClient = new FeatServiceClient();
+	public static StatisticsServiceClient get() {
+		if (statisticsServiceClient == null) {
+			statisticsServiceClient = new StatisticsServiceClient();
 		}
 
-		return featServiceClient;
+		return statisticsServiceClient;
 	}
 
-	public RestResponse<List<String>> getFeats(String characterName) throws IOException {
-		return restCaller.postCall(featServiceServerUrl + "/v1/feat/get-feats",
-				new GetFeatsParameter(characterName), new TypeReference<List<String>>() {});
+	public RestResponse<List<String>> getStatisticss(String characterName) throws IOException {
+		return restCaller.postCall(statisticsServiceServerUrl + "/v1/statistics/get-statisticss",
+				new GetStatisticssParameter(characterName), new TypeReference<List<String>>() {});
 	}
 
-	public RestResponse<String> addFeat(String characterName, String feat) throws IOException {
-		return restCaller.postCall(featServiceServerUrl + "/v1/feat/add-feat",
-				new AddFeatParameter(characterName, feat), String.class);
+	public RestResponse<String> addStatistics(String characterName, String statistics) throws IOException {
+		return restCaller.postCall(statisticsServiceServerUrl + "/v1/statistics/add-statistics",
+				new AddStatisticsParameter(characterName, statistics), String.class);
 	}
 
-	public RestResponse<String> debugAddFeat(String username, String feat) throws IOException {
-		return restCaller.postCall(featServiceServerUrl + "/v1/feat/debug-add-feat",
-				new DebugAddFeatParameter(username, feat), String.class);
+	public RestResponse<String> debugAddStatistics(String username, String statistics) throws IOException {
+		return restCaller.postCall(statisticsServiceServerUrl + "/v1/statistics/debug-add-statistics",
+				new DebugAddStatisticsParameter(username, statistics), String.class);
 	}
 }

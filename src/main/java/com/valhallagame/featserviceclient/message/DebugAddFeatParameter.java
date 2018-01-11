@@ -1,4 +1,4 @@
-package com.valhallagame.featserviceclient.message;
+package com.valhallagame.statisticsserviceclient.message;
 
 import javax.validation.constraints.NotNull;
 
@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class DebugAddFeatParameter {
+public class DebugAddStatisticsParameter {
 	@NotNull
 	private String username;
 	
