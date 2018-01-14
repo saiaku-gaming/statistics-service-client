@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class IncrementParameter {
+public class IncrementIntCounterParameter {
 	@NotNull
 	private String characterName;
 	
