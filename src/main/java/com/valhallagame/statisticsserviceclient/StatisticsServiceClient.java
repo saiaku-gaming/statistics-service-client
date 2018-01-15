@@ -6,6 +6,7 @@ import com.valhallagame.common.DefaultServicePortMappings;
 import com.valhallagame.common.RestCaller;
 import com.valhallagame.common.RestResponse;
 import com.valhallagame.statisticsserviceclient.message.IncrementIntCounterParameter;
+import com.valhallagame.statisticsserviceclient.message.StatisticsKey;
 
 
 public class StatisticsServiceClient {
@@ -31,7 +32,7 @@ public class StatisticsServiceClient {
 		return statisticsServiceClient;
 	}
 
-	public RestResponse<String> incrementIntCounter(String characterName, String key, int value) throws IOException {
+	public RestResponse<String> incrementIntCounter(String characterName, StatisticsKey key, int value) throws IOException {
 		return restCaller.postCall(statisticsServiceServerUrl + "/v1/statistics/increment-int-counter",
 				new IncrementIntCounterParameter(characterName, key, value), String.class);
 	}

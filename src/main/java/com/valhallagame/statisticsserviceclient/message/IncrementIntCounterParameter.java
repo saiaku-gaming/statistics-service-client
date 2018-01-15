@@ -14,7 +14,7 @@ public class IncrementIntCounterParameter {
 	private String characterName;
 	
 	@NotNull
-	private String key;
+	private StatisticsKey key;
 	
 	@NotNull
 	private int value;
