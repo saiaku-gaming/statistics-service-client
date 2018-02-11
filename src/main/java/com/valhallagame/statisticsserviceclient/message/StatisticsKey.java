@@ -17,5 +17,8 @@ public enum StatisticsKey {
 	/*------------ CHARACTER RELATED ---------------*/
 	DEATHS,
 	DAMAGE_DONE,
-	DAMAGE_TAKEN
+	DAMAGE_TAKEN, 
+	
+	/*------------ Dungeon RELATED ---------------*/
+	TRAINING_GROUNDS_CLEAR_TIME //Should this be in its own enum?
 }
