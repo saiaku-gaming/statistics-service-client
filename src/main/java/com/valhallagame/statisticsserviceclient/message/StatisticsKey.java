@@ -25,5 +25,9 @@ public enum StatisticsKey {
 	DAMAGE_TAKEN,
 	
 	/*------------ Dungeon RELATED ---------------*/
-	TRAINING_GROUNDS_CLEAR_TIME //Should this be in its own enum?
+	TRAINING_GROUNDS_CLEAR_TIME, //Should this be in its own enum?
+	
+	/*------------ Fredstorp RELAED --------------*/
+	FREDSTORP_CLEAR_TIME,
+	FREDSTORP_CLEARED
 }
