@@ -26,8 +26,20 @@ public enum StatisticsKey {
 	
 	/*------------ Dungeon RELATED ---------------*/
 	TRAINING_GROUNDS_CLEAR_TIME, //Should this be in its own enum?
-	
-	/*------------ Fredstorp RELAED --------------*/
+
+	/*------------ Missveden RELATED --------------*/
+	MISSVEDEN_CLEAR_TIME,
+	MISSVEDEN_CLEARED,
+
+	/*------------ Fredstorp RELATED --------------*/
 	FREDSTORP_CLEAR_TIME,
-	FREDSTORP_CLEARED
+	FREDSTORP_CLEARED,
+
+	/*------------ Hjuö RELATED --------------*/
+	HJUO_CLEAR_TIME,
+	HJUO_CLEARED,
+
+	/*------------ Grynmas Lair RELATED --------------*/
+	GRYNMAS_LAIR_CLEAR_TIME,
+	GRYNMAS_LAIR_CLEARED
 }
